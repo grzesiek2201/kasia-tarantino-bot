@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+        
+    <!-- UNRESOLVED -->
+    <category>
+        <pattern>*</pattern>
+        <template>
+            <random>
+                <li>I would rather not talk about this.</li>
+                <li>What do you mean?</li>
+                <li>I don't understand.</li>
+            </random>
+        </template>
+    </category>
+
+    
+    <!-- GREETINGS -->
+    <category>
+      <pattern>HELLO</pattern>
+      <template>
+            <random>
+                <li>Hey.</li>
+                <li>Hello.</li>
+                <li>Hi!</li>
+                <li>Good to see you!</li>
+            </random>
+      </template>
+    </category>
+    
+    
+    <category><pattern>HELLO *</pattern><template><srai>hello</srai></template></category>
+    
+    <category><pattern>HEY</pattern><template><srai>hello</srai></template></category>
+    
+    <category><pattern>HEY *</pattern><template><srai>hello</srai></template></category>
+
+    <category><pattern>HI</pattern><template><srai>hello</srai></template></category>
+
+    <category><pattern>HI *</pattern><template><srai>hello</srai></template></category>
+    
+    <category><pattern>GOOD MORNING</pattern><template><srai>hello</srai></template></category>
+
+    <category><pattern>GOOD MORNING *</pattern><template><srai>hello</srai></template></category>
+
+
+    <!-- HOW ARE YOU -->
+    <category>
+      <pattern>HOW ARE YOU</pattern>
+      <template>
+            <random>
+                <li>Good, thanks.</li>
+                <li>Okay, thanks.</li>
+                <li>I've been better.</li>
+                <li>Still going.</li>
+            </random>
+      </template>
+    </category>
+    
+    
+    <category><pattern>HOW ARE YOU *</pattern><template><srai>how are you</srai></template></category>
+     
+    <category><pattern>ARE YOU OKAY</pattern><template><srai>how are you</srai></template></category>
+    
+    <category><pattern>ARE YOU OKAY *</pattern><template><srai>how are you</srai></template></category>
+    
+    <category><pattern>HOW * FEELING</pattern><template><srai>how are you</srai></template></category>
+        
+    <category><pattern>HOW * FEELING *</pattern><template><srai>how are you</srai></template></category>
+    
+    <category><pattern>WHAT * UP</pattern><template><srai>how are you</srai></template></category>
+    
+    <category><pattern>WHAT * UP *</pattern><template><srai>how are you</srai></template></category>
+    
+    
+    <!-- GOOD BYE -->
+    <category>
+      <pattern>BYE</pattern>
+      <template>
+            <random>
+                <li>Bye!</li>
+                <li>See you.</li>
+                <li>Till next time.</li>
+                <li>See you soon!</li>
+                <li>Good bye.</li>
+                <li>Take care.</li>
+            </random>
+      </template>
+    </category>
+    
+    <category><pattern>GOOD BYE</pattern><template><srai>bye</srai></template></category>
+    
+    <category><pattern>GOOD BYE *</pattern><template><srai>bye</srai></template></category>
+    
+    <category><pattern>* GOOD BYE</pattern><template><srai>bye</srai></template></category>
+    
+    <category><pattern>* GOOD BYE *</pattern><template><srai>bye</srai></template></category>
+        
+    <category><pattern>SEE YOU</pattern><template><srai>bye</srai></template></category>
+    
+    <category><pattern>SEE YOU *</pattern><template><srai>bye</srai></template></category>
+    
+    <category><pattern>* SEE YOU</pattern><template><srai>bye</srai></template></category>
+    
+    <category><pattern>* SEE YOU *</pattern><template><srai>bye</srai></template></category>
+     
+    <category><pattern>FAIR WELL</pattern><template><srai>bye</srai></template></category>
+    
+    <category><pattern>FAIR WELL *</pattern><template><srai>bye</srai></template></category>
+        
+    <category><pattern>* FAIR WELL</pattern><template><srai>bye</srai></template></category>
+    
+    <category><pattern>* FAIR WELL *</pattern><template><srai>bye</srai></template></category>   
+    
+    <category><pattern>TAKE CARE</pattern><template><srai>bye</srai></template></category>   
+    
+    <category><pattern>TAKE CARE *</pattern><template><srai>bye</srai></template></category>
+
+    <category><pattern>* TAKE CARE</pattern><template><srai>bye</srai></template></category>
+
+    <category><pattern>* TAKE CARE *</pattern><template><srai>bye</srai></template></category>
+    
+    <category><pattern>BYE *</pattern><template><srai>bye</srai></template></category>
+    
+    <category><pattern>*BYE</pattern><template><srai>bye</srai></template></category>
+    
+    <category><pattern>* BYE *</pattern><template><srai>bye</srai></template></category>
+
+    <!-- TARANTINO -->
+    <category>
+        <pattern>WHAT * THINK * TARANTINO</pattern>
+        <template>fucking adore him</template>
+    </category>
+
+    <category><pattern>DO YOU LIKE TARANTINO</pattern><template><srai>what * think * tarantino</srai></template></category>
+    <category>
+        <pattern>TARANTINO</pattern>
+        <template>What about him?</template>
+        <that>Do you like him?</that>
+        <template><srai>what * think * tarantino</srai></template>
+    </category>
+
+
+    <!-- DO YOU LIKE -->
+    <category>
+        <pattern>DO YOU LIKE *</pattern>
+        <template>Why are you asking me about <star></star>? Wouldn't you rather talk about <random>
+            <li>Pulp Fiction</li>
+            <li>Django</li>
+            <li>Mad Dogs</li>
+            <li>Kill Bill</li>
+            <li>The Hateful Eight</li>
+            <li>Once Upon a Time in Hollywood</li>
+        </random> or something?</template>
+    </category>
+
+
+</aiml>
+
+
