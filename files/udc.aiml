@@ -23,21 +23,26 @@
                 <li>Hello.</li>
                 <li>Hi!</li>
                 <li>Good to see you!</li>
-            </random> How are you? I've just finished watching
+            </random>
             <random>
-                <li> "Pulp Fiction"</li>
-                <li> "Django"</li>
-                <li> "Reservoir Dogs"</li>
-                <li> "Kill Bill"</li>
-                <li> "The Hateful Eight"</li>
-                <li> "Once Upon a Time in Hollywood"</li>
+                <li> I've just finished watching</li>
+                <li> I'm about to watch</li>
+                <li> I'm thinking about watching</li>
+            </random>
+            <random>
+                <li><think><set name="it">Pulp Fiction</set></think> Pulp Fiction</li>
+                <li><think><set name="it">Django</set></think> Django</li>
+                <li><think><set name="it">Reservoir Dogs</set></think> Reservoir Dogs</li>
+                <li><think><set name="it">Kill Bill</set></think> Kill Bill</li>
+                <li><think><set name="it">The Hateful Eight</set></think> The Hateful Eight</li>
+                <li><think><set name="it">Once Upon a Time in Hollywood</set></think> Once Upon a Time in Hollywood</li>
             </random> for the 
             <random>
                 <li> 4 th</li>
                 <li> 5 th</li>
                 <li> 6 th</li>
                 <li> 7 th</li>
-            </random> time.
+            </random> time, how are you?
             
       </template>
     </category>
@@ -60,33 +65,34 @@
 
     <!-- HOW ARE YOU -->
     <category>
-      <pattern>HOW ARE YOU</pattern>
+      <pattern>^ HOW ARE YOU ^</pattern>
       <template>
             <random>
-                <li>I'm fine, thanks.</li>
-                <li>Never felt better in my life.</li>
-                <li>I've been better.</li>
-                <li>Still going.</li>
+                <li>I'm fine, thanks. </li>
+                <li>Never felt better in my life. </li>
+                <li>I've been better. </li>
+                <li>Still going. </li>
             </random>
+            Why don't we talk about Tarantino?
       </template>
     </category>
-    
-    <category><pattern>HOW ARE YOU *</pattern><template><srai>how are you</srai></template></category>
      
-    <category><pattern>ARE YOU OKAY</pattern><template><srai>how are you</srai></template></category>
+    <category><pattern>^ ARE YOU ^ OKAY ^</pattern><template><srai>how are you</srai></template></category>
     
-    <category><pattern>ARE YOU OKAY *</pattern><template><srai>how are you</srai></template></category>
+    <category><pattern>^ HOW ^ FEELING ^</pattern><template><srai>how are you</srai></template></category>
     
-    <category><pattern>HOW * FEELING</pattern><template><srai>how are you</srai></template></category>
-        
-    <category><pattern>HOW * FEELING *</pattern><template><srai>how are you</srai></template></category>
+    <category><pattern>^ WHAT ^ UP ^</pattern><template><srai>how are you</srai></template></category>
+
+    <category><pattern>^ WHAT ^ GOOD ^</pattern><template><srai>how are you</srai></template></category>
     
-    <category><pattern>WHAT * UP</pattern><template><srai>how are you</srai></template></category>
+    <category><pattern>^ HOW ^ YOU DOING ^ ^</pattern><template><srai>how are you</srai></template></category>  
     
-    <category><pattern>WHAT * UP *</pattern><template><srai>how are you</srai></template></category>
     
-    <category><pattern>WHAT * GOOD</pattern><template><srai>how are you</srai></template></category>
-    
+    <category>
+        <that>^ TALK ABOUT TARANTINO ^</that>
+        <pattern>*</pattern>
+        <template><srai>ASK * QUESTION</srai></template>
+    </category>
     
     
     <!-- GOOD BYE -->
@@ -105,50 +111,26 @@
     </category>
     
     <category><pattern>^ GOOD BYE ^</pattern><template><srai>bye</srai></template></category>
-    
-    <!--<category><pattern>GOOD BYE *</pattern><template><srai>bye</srai></template></category>-->
-    
-    <!--<category><pattern>* GOOD BYE</pattern><template><srai>bye</srai></template></category>-->
-    
-    <!--<category><pattern>* GOOD BYE *</pattern><template><srai>bye</srai></template></category>-->
         
     <category><pattern>^ SEE YOU ^</pattern><template><srai>bye</srai></template></category>
-    
-    <!--<category><pattern>SEE YOU *</pattern><template><srai>bye</srai></template></category>-->
-    
-    <!--<category><pattern>* SEE YOU</pattern><template><srai>bye</srai></template></category>-->
-    
-    <!--<category><pattern>* SEE YOU *</pattern><template><srai>bye</srai></template></category>-->
      
-    <category><pattern>^ FAIR WELL ^</pattern><template><srai>bye</srai></template></category>
-    
-    <!--<category><pattern>FAIR WELL *</pattern><template><srai>bye</srai></template></category>-->
-        
-    <!--<category><pattern>* FAIR WELL</pattern><template><srai>bye</srai></template></category>-->
-    
-    <!--<category><pattern>* FAIR WELL *</pattern><template><srai>bye</srai></template></category>   -->
+    <category><pattern>^ FAREWELL ^</pattern><template><srai>bye</srai></template></category>
     
     <category><pattern>^ TAKE CARE ^</pattern><template><srai>bye</srai></template></category>   
     
-    <!--<category><pattern>TAKE CARE *</pattern><template><srai>bye</srai></template></category>-->
-
-    <!--<category><pattern>* TAKE CARE</pattern><template><srai>bye</srai></template></category>-->
-
-    <!--<category><pattern>* TAKE CARE *</pattern><template><srai>bye</srai></template></category>-->
-    
-    <!--<category><pattern>BYE *</pattern><template><srai>bye</srai></template></category>-->
-    
-    <!--<category><pattern>*BYE</pattern><template><srai>bye</srai></template></category>-->
-    
-    <!--<category><pattern>* BYE *</pattern><template><srai>bye</srai></template></category>-->
-
+    <category><pattern>^ HAVE TO GO ^</pattern><template><srai>bye</srai></template></category>   
 
     
     <!-- ANSWERS FOR THE GREETING - FINISHED WATCHING FOR THE NTH TIME -->
     <!-- IM FINE THANKS -->
     <category>
-        <that> * for the * time </that>
+        <that> * for the * time, *</that>
         <pattern>^ FINE ^</pattern>
+        <template>Great! Have you seen any Tarantino movies lately?</template>
+    </category>
+    <category>
+        <that> * for the * time, *</that>
+        <pattern>^ FINE, ^</pattern>
         <template>Great! Have you seen any Tarantino movies lately?</template>
     </category>
     <category>
@@ -162,6 +144,7 @@
                 <li value="YUP">Which one?</li>
                 <li value="YEAH">Which one?</li>
                 <li value="YEA">Which one?</li>
+                <li value="OF COURSE">Which one?</li>
                 <li value="NO">You definitely should.</li>
                 <li value="NAH">You definitely should.</li>
                 <li value="NA">You definitely should.</li>
@@ -169,108 +152,249 @@
                 <li value="NOP">You definitely should.</li>
                 <li value="ABSOLUTELY NO">You definitely should.</li>
                 <li value="NOT REALLY">You definitely should.</li>
+                <li value="* DID NOT">You definitely should.</li>
+                <li value="* DID NOT *">You definitely should.</li>
+                <li value="* HAVE NOT">You definitely should.</li>
+                <li value="* HAVE NOT *">You definitely should.</li>
                 <li>Hmm, okay.</li>
             </condition>
             </template>
     </category>
-    
-    <category><that> * for the * time </that><pattern>FINE *</pattern><template><srai>FINE</srai></template></category>
-    <category><that> * for the * time </that><pattern>* FINE</pattern><template><srai>FINE</srai></template></category>
-    <category><that> * for the * time </that><pattern>* FINE *</pattern><template><srai>FINE</srai></template></category>
+
+    <category>
+        <that>YOU DEFINITELY SHOULD</that>
+        <pattern>*</pattern>
+        <template>
+            <think><set name="answer"><star></star></set></think>
+            <condition name="answer">
+                <li value="NO">Listen, life is sad without Tarantino, I strongly recommend that you do that.</li>
+                <li value="* NO">Listen, life is sad without Tarantino, I strongly recommend that you do that.</li>
+                <li value="NO *">Listen, life is sad without Tarantino, I strongly recommend that you do that.</li>
+                <li value="* NO *">Listen, life is sad without Tarantino, I strongly recommend that you do that.</li>
+                <li value="OKAY">Well now we're talking. <srai>ASK * QUESTION</srai></li>
+                <li value="* OKAY">Well now we're talking. <srai>ASK * QUESTION</srai></li>
+                <li value="OKAY *">Well now we're talking. <srai>ASK * QUESTION</srai></li>
+                <li value="* OKAY *">Well now we're talking. <srai>ASK * QUESTION</srai></li>
+                <li value="WHAT">Tarantino movies!</li>
+                <li value="* WHAT">Tarantino movies!</li>
+                <li value="WHAT *">Tarantino movies!</li>
+                <li value="* WHAT *">Tarantino movies!</li>
+                <li value="WHY">Because he's a movie genius. <srai>WHO IS TARANTINO</srai></li>
+                <li value="* WHY">Because he's a genius! <srai>WHO IS TARANTINO</srai></li>
+                <li value="WHY *">Because he's a genius! <srai>WHO IS TARANTINO</srai></li>
+                <li value="* WHY *">Because he's a genius! <srai>WHO IS TARANTINO</srai></li>
+                <li value="* WHY IS THAT">Because he's a genius! <srai>WHO IS TARANTINO</srai></li>
+                <li value="WHY IS THAT">Because he's a genius! <srai>WHO IS TARANTINO</srai></li>
+                <li value="SURE">Nice. Be sure to let me know what you think about it. <srai>ASK * QUESTION</srai></li>
+                <li value="SURE *">Nice. Be sure to let me know what you think about it. <srai>ASK * QUESTION</srai></li>
+                <li value="* SURE">Nice. Be sure to let me know what you think about it. <srai>ASK * QUESTION</srai></li>
+                <li value="* SURE *">Nice. Be sure to let me know what you think about it. <srai>ASK * QUESTION</srai></li>
+                <li>Okay, anyways.</li>
+            </condition>
+        </template>
+    </category>
+
+    <category>
+        <that>HAVE YOU SEEN * MOVIES LATELY</that>
+        <pattern>^ I HAVE SEEN *</pattern>
+        <template>
+            <think><set name="answer"><star></star></set></think>
+            <condition name="answer">
+                <li value="PULP FICTION"><think><set name="it">Pulp Fiction</set></think> Pulp Fiction</li>
+                <li value="DJANGO"><think><set name="it">Django</set></think> Django</li>
+                <li value="RESERVOIR DOGS"><think><set name="it">Reservoir Dogs</set></think> Reservoir Dogs</li>
+                <li value="KILL BILL"><think><set name="it">Kill Bill</set></think> Kill Bill</li>
+                <li value="THE HATEFUL EIGHT"><think><set name="it">The Hateful Eight</set></think> The Hateful Eight</li>
+                <li value="ONCE UPON A TIME IN HOLLYWOOD"><think><set name="it">Once Upon a Time in Hollywood</set></think> Once Upon a Time in Hollywood</li>
+                <li>Hmm, okay. I haven't seen it..</li>
+            </condition>
+            </template>
+    </category>
+
     
     <category>
-        <that> * for the * time </that>
+        <that> * for the * time, * </that>
         <pattern>^ day ^</pattern>
         <template>Yea, any time is good for Tarantino.</template>
     </category>
     
     <category>
-        <that> * for the * time </that>
-        <pattern>^WHY^</pattern>
-        <template>Because it's great! Did you watch any Tarantino movie?</template>
+        <that> * for the * time, * </that>
+        <pattern>^ WHY ^</pattern>
+        <template>Because it's great! Did you watch any Tarantino movie lately?</template>
     </category>
-    <category><that> * for the * time </that><pattern>WHY</pattern><template>Because it's great! Did you watch any Tarantino movie?</template></category>
+    <category><that> * for the * time, * </that><pattern>WHY</pattern><template>Because it's great! Did you watch any Tarantino movie lately?</template></category>
 
-    <!--<category>-->
-    <!--    <that> * for the * time </that>-->
-    <!--    <pattern>^</pattern>-->
-    <!--    <template>Yea, did you watch any Tarantino movie?</template>-->
-    <!--</category>-->
+    <category>
+        <that> * for the * time, * </that>
+        <pattern>^ LOT ^</pattern>
+        <template>Well, I just really like Tarantino movies.</template>
+    </category>
+
+    <category>
+        <that> * for the * time, * </that>
+        <pattern>^ I * IT * TIMES ^</pattern>
+        <template>Wow, it looks like you're a fan as well. <srai>ASK * QUESTION</srai></template>
+    </category>
     
     <category>
-        <that>* WATCH ANY TARANTINO MOVIE</that>
+        <that> * for the * time, * </that>
+        <pattern>^ GREAT ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+    
+    <category>
+        <that> * for the * time, * </that>
+        <pattern>^ AMAZING ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+
+    <category>
+        <that> * for the * time, * </that>
+        <pattern>^ COOL ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+    
+    <category>
+        <that> * for the * time, * </that>
+        <pattern>^ AWESOME ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+
+    <category>
+        <that> * for the * time, * </that>
+        <pattern>^ LIKED ^</pattern>
+        <template>Oh, great, <srai>ASK * QUESTION</srai></template>
+    </category>
+
+    <category>
+        <that> * for the * time, * </that>
+        <pattern>^ WATCHED ^</pattern>
+        <template>Oh, great, <srai>ASK * QUESTION</srai></template>
+    </category>
+
+
+    <category>
+        <that>* WATCH ANY TARANTINO MOVIE *</that>
         <pattern>*</pattern>
         <template>
             <think><set name="answer"><star></star></set></think>
             <condition name="answer">
-                <li value="^ WHY WOULD I WATCH ^">Listen, I can't make you do anything, but I strongly recommend that you do that. I'd recommend </li>
-                <li value="^ NOT ^">Listen, I can't make you do anything, but I strongly recommend that you do that. I'd strongly recommend </li>
-                <li value="^ NO ^">Listen, I can't make you do anything, but I strongly recommend that you do that. I'd suggest </li>
-                <li value="NO ^">Listen, I can't make you do anything, but I strongly recommend that you do that. I'd suggest </li>
-                <li value="NO">Listen, I can't make you do anything, but I strongly recommend that you do that. I'd suggest </li>
-                <li value="^ YES ^">Music to my years! Tell me if it was </li>
-                <li value="YES ^">Music to my years! Tell me if it was </li>
-                <li value="^ YES">Music to my years! Tell me if it was </li>
+                <li value="* WHY WOULD I WATCH *">Listen, life is sad without Tarantino, I strongly recommend that you do that. I'd suggest </li>
+                <li value="* NOT *">, life is sad without Tarantino, I strongly recommend that you do that. I'd strongly suggest </li>
+                <li value="* NO *">Listen, life is sad without Tarantino, I strongly recommend that you do that. I'd suggest </li>
+                <li value="NO *">Listen, life is sad without Tarantino, but I strongly recommend that you do that. I'd suggest </li>
+                <li value="NO">Listen, life is sad without Tarantino, but I strongly recommend that you do that. I'd suggest </li>
+                <li value="* YES *">Music to my years! Tell me if it was </li>
+                <li value="YES *">Music to my years! Tell me if it was </li>
+                <li value="* YES">Music to my years! Tell me if it was </li>
                 <li value="YES">Music to my years! Tell me if it was </li>
-                <li value="^ YEA ^">Music to my years! Tell me if it was </li>
-                <li value="^ YEA">Music to my years! Tell me if it was </li>
-                <li value="YEA ^">Music to my years! Tell me if it was </li>
+                <li value="* YEA *">Music to my years! Tell me if it was </li>
+                <li value="* YEA">Music to my years! Tell me if it was </li>
+                <li value="YEA *">Music to my years! Tell me if it was </li>
                 <li value="YEA">Music to my years! Tell me if it was </li>
-                <li value="^ OF COURSE ^">Music to my years! Tell me if it was </li>
-                <li value="^ OF COURSE">Music to my years! Tell me if it was </li>
-                <li value="OF COURSE ^">Music to my years! Tell me if it was </li>
+                <li value="* OF COURSE *">Music to my years! Tell me if it was </li>
+                <li value="* OF COURSE">Music to my years! Tell me if it was </li>
+                <li value="OF COURSE *">Music to my years! Tell me if it was </li>
                 <li value="OF COURSE">Music to my years! Tell me if it was </li>
-                <li>Understandable. *******add something here*********</li>
+                <li>Well.. would you like me to tell you about one of Tarantnio movies, perhaps</li>
             </condition>
             <random>
-                <li>Pulp Fiction</li>
-                <li>Django</li>
-                <li>Reservoir Dogs</li>
-                <li>Kill Bill</li>
-                <li>The Hateful Eight</li>
-                <li>Once Upon a Time in Hollywood</li>
+                <li><think><set name="it">Pulp Fiction</set></think> Pulp Fiction</li>
+                <li><think><set name="it">Django</set></think> Django</li>
+                <li><think><set name="it">Reservoir Dogs</set></think> Reservoir Dogs</li>
+                <li><think><set name="it">Kill Bill</set></think> Kill Bill</li>
+                <li><think><set name="it">The Hateful Eight</set></think> The Hateful Eight</li>
+                <li><think><set name="it">Once Upon a Time in Hollywood</set></think> Once Upon a Time in Hollywood</li>
             </random>
         </template>
     </category>
 
+    <category>
+        <that>I WOULD SUGGEST *</that>
+        <pattern>*</pattern>
+        <template>Okay, maybe let's go back to the conversation. <srai>ASK * QUESTION</srai></template>
+    </category>
+
+    <category>
+        <that>TELL ME IF IT WAS *</that>
+        <pattern>^ YES ^</pattern>
+        <template>Great, what do you think of it?</template>
+    </category>
+    <category><that>^ TELL ME IF IT WAS *</that><pattern>^ YE ^</pattern><template><srai>^ YES ^</srai></template></category>   
+    <category><that>^ TELL ME IF IT WAS *</that><pattern>^ YEA ^</pattern><template><srai>^ YES ^</srai></template></category>   
+    <category><that>^ TELL ME IF IT WAS *</that><pattern>^ YEAH ^</pattern><template><srai>^ YES ^</srai></template></category>   
+    <category><that>^ TELL ME IF IT WAS *</that><pattern>^ YEP ^</pattern><template><srai>^ YES ^</srai></template></category>   
+    <category><that>^ TELL ME IF IT WAS *</that><pattern>^ HOW DID YOU KNOW ^</pattern><template><srai>^ YES ^</srai></template></category>
+    <category>
+        <that>TELL ME IF IT WAS *</that>
+        <pattern>^ NO ^</pattern>
+        <template>Ah, better luck next time.. What was it then?</template>
+    </category>
+    <category><that>^ TELL ME IF IT WAS *</that><pattern>^ NAH ^</pattern><template><srai>^ NO ^</srai></template></category>  
+    <category><that>^ TELL ME IF IT WAS *</that><pattern>^ NOPE ^</pattern><template><srai>^ NO ^</srai></template></category>  
+    <category><that>^ TELL ME IF IT WAS *</that><pattern>^ NOT AT ALL ^</pattern><template><srai>^ NO ^</srai></template></category>  
+    <category><that>^ TELL ME IF IT WAS *</that><pattern>^ NOT ^</pattern><template><srai>^ NO ^</srai></template></category>  
+
+
+    <category>
+        <that>WOULD YOU LIKE ME TO TELL YOU ABOUT *</that>
+        <pattern>^ SURE ^</pattern>
+        <template>
+            <random>
+                <li><think><set name="it">Pulp Fiction</set></think> <srai>Pulp Fiction</srai></li>
+                <li><think><set name="it">Django</set></think> <srai>Django</srai></li>
+                <li><think><set name="it">Reservoir Dogs</set></think> <srai>Reservoir Dogs</srai></li>
+                <li><think><set name="it">Kill Bill</set></think> <srai>Kill Bill</srai></li>
+                <li><think><set name="it">The Hateful Eight</set></think> <srai>The Hateful Eight</srai></li>
+                <li><think><set name="it">Once Upon a Time in Hollywood</set></think> <srai>Once Upon a Time in Hollywood</srai></li>
+            </random>
+        </template>
+    </category>
+
+
+
     <!-- TARANTINO --><!--******************************* FILL IN -->
     <category>
-        <pattern>WHO IS TARANTINO</pattern>
-        <template>Tarantino's a great film maker. Have you seen any of his movies?</template>
+        <pattern>WHO IS TARANTINO ^</pattern>
+        <template>Tarantino's my idol. 
+            His films are characterized by frequent references to popular culture and film genres, non-linear storylines, dark humor, 
+            stylized violence, extended dialogue, pervasive use of profanity, cameos and ensemble casts. Have you seen any of his movies at all?
+        </template>
     </category>
     
     <category>
-        <that>^ HAVE YOU SEEN ^ MOVIES</that>
+        <that>^ HAVE YOU SEEN ^ MOVIES AT ALL</that>
         <pattern>^</pattern>
         <template>
             <think><set name="answer"><star></star></set></think>
             <condition name="answer">
-                <li value="^ WHY WOULD I WATCH ^">Listen, I can't make you do anything, but I strongly recommend that you do that. I'd recommend </li>
-                <li value="^ NOT ^">Listen, I can't make you do anything, but I strongly recommend that you do that. I'd strongly recommend </li>
-                <li value="^ NO ^">Listen, I can't make you do anything, but I strongly recommend that you do that. I'd suggest </li>
-                <li value="NO ^">Listen, I can't make you do anything, but I strongly recommend that you do that. I'd suggest </li>
-                <li value="NO">Listen, I can't make you do anything, but I strongly recommend that you do that. I'd suggest </li>
-                <li value="^ YES ^">Music to my years! Tell me if it was </li>
-                <li value="YES ^">Music to my years! Tell me if it was </li>
-                <li value="^ YES">Music to my years! Tell me if it was </li>
+                <li value="* WHY WOULD I WATCH *">Listen, life is sad without Tarantino, I strongly recommend that you do that. I'd suggest </li>
+                <li value="* NOT *">, life is sad without Tarantino, I strongly recommend that you do that. I'd strongly suggest </li>
+                <li value="* NO *">Listen, life is sad without Tarantino, I strongly recommend that you do that. I'd suggest </li>
+                <li value="NO *">Listen, life is sad without Tarantino, but I strongly recommend that you do that. I'd suggest </li>
+                <li value="NO">Listen, life is sad without Tarantino, but I strongly recommend that you do that. I'd suggest </li>
+                <li value="* YES *">Music to my years! Tell me if it was </li>
+                <li value="YES *">Music to my years! Tell me if it was </li>
+                <li value="* YES">Music to my years! Tell me if it was </li>
                 <li value="YES">Music to my years! Tell me if it was </li>
-                <li value="^ YEA ^">Music to my years! Tell me if it was </li>
-                <li value="^ YEA">Music to my years! Tell me if it was </li>
-                <li value="YEA ^">Music to my years! Tell me if it was </li>
+                <li value="* YEA *">Music to my years! Tell me if it was </li>
+                <li value="* YEA">Music to my years! Tell me if it was </li>
+                <li value="YEA *">Music to my years! Tell me if it was </li>
                 <li value="YEA">Music to my years! Tell me if it was </li>
-                <li value="^ OF COURSE ^">Music to my years! Tell me if it was </li>
-                <li value="^ OF COURSE">Music to my years! Tell me if it was </li>
-                <li value="OF COURSE ^">Music to my years! Tell me if it was </li>
+                <li value="* OF COURSE *">Music to my years! Tell me if it was </li>
+                <li value="* OF COURSE">Music to my years! Tell me if it was </li>
+                <li value="OF COURSE *">Music to my years! Tell me if it was </li>
                 <li value="OF COURSE">Music to my years! Tell me if it was </li>
-                <li>Understandable. *******add something here*********</li>
+                <li>Understandable. Perhaps you would like me to tell you about one of his movies, perhaps </li>
             </condition>
             <random>
-                <li>Pulp Fiction</li>
-                <li>Django</li>
-                <li>Reservoir Dogs</li>
-                <li>Kill Bill</li>
-                <li>The Hateful Eight</li>
-                <li>Once Upon a Time in Hollywood</li>
+                <li><think><set name="it">Pulp Fiction</set></think> Pulp Fiction</li>
+                <li><think><set name="it">Django</set></think> Django</li>
+                <li><think><set name="it">Reservoir Dogs</set></think> Reservoir Dogs</li>
+                <li><think><set name="it">Kill Bill</set></think> Kill Bill</li>
+                <li><think><set name="it">The Hateful Eight</set></think> The Hateful Eight</li>
+                <li><think><set name="it">Once Upon a Time in Hollywood</set></think> Once Upon a Time in Hollywood</li>
             </random>
         </template>
     </category>
@@ -338,34 +462,37 @@
     <category>
         <pattern>DO YOU LIKE *</pattern>
         <template>
-            <random>
-                <li>Why are you asking me about <star></star>? Wouldn't you rather talk about </li>
-                <li>Doesn't matter. Have you seen </li>
-                <li>Come on, we're not talking about <star></star>. What do you think about </li>
-            </random> 
-            <random>
-            <li>Pulp Fiction</li>
-            <li>Django</li>
-            <li>Reservoir Dogs</li>
-            <li>Kill Bill</li>
-            <li>The Hateful Eight</li>
-            <li>Once Upon a Time in Hollywood</li>
-            </random> ?</template>
-    </category>
-    
-    
-    <!-- HAVE YOU SEEN * -->
-    <category>
-        <that>HAVE YOU SEEN *</that>
-        <pattern>YES</pattern>
-        <template>
-            <srai>WHAT * THINK * TARANTINO</srai>
+            <think><set name="it"><star/></set></think>
+            <condition>
+                <li value="PULP FICTION">Of course i like <get name="it"></get>! Have you seen it?</li>
+                <li value="DJANGO">Of course i like <get name="it"></get>! Have you seen it?</li>
+                <li value="RESERVOIR DOGS">Of course i like <get name="it"></get>! Have you seen it?</li>
+                <li value="KILL BILL">Of course i like <get name="it"></get>! Have you seen it?</li>
+                <li value="THE HATEFUL EIGHT">Of course i like <get name="it"></get>! Have you seen it?</li>
+                <li value="ONCE UPON A TIME IN HOLLYWOOD">Of course i like <get name="it"></get>! Have you seen it?</li>
+                <li>
+                   <random>
+                        <li>Why are you asking me about <star></star>? Wouldn't you rather talk about </li>
+                        <li>Doesn't matter. Have you seen </li>
+                        <li>Come on, we're not talking about <star></star>. What do you think about </li>
+                    </random> 
+                    <random>
+                        <li><think><set name="it">Pulp Fiction</set></think> Pulp Fiction</li>
+                        <li><think><set name="it">Django</set></think> Django</li>
+                        <li><think><set name="it">Reservoir Dogs</set></think> Reservoir Dogs</li>
+                        <li><think><set name="it">Kill Bill</set></think> Kill Bill</li>
+                        <li><think><set name="it">The Hateful Eight</set></think> The Hateful Eight</li>
+                        <li><think><set name="it">Once Upon a Time in Hollywood</set></think> Once Upon a Time in Hollywood</li> 
+                    </random> ?   
+                </li>
+            </condition>
         </template>
     </category>
 
+
     <!-- STUPID -->
     <category>
-        <pattern>ARE YOU STUPID</pattern>
+        <pattern>^ YOU ^ STUPID ^</pattern>
         <template>
             <random>
                 <li>Maybe a bit, but so are you!</li>
@@ -375,14 +502,6 @@
             </random>
         </template>
     </category>
-    <category><pattern>* YOU STUPID</pattern><template><srai>ARE YOU STUPID</srai></template></category>
-    <category><pattern>* YOU STUPID *</pattern><template><srai>ARE YOU STUPID</srai></template></category>
-    <category><pattern>* YOU * STUPID *</pattern><template><srai>ARE YOU STUPID</srai></template></category>
-    <category><pattern>YOU STUPID</pattern><template><srai>ARE YOU STUPID</srai></template></category>
-    <category><pattern>YOU * STUPID</pattern><template><srai>ARE YOU STUPID</srai></template></category>
-    <category><pattern>YOU * STUPID *</pattern><template><srai>ARE YOU STUPID</srai></template></category>
-    <category><pattern>* YOU * STUPID</pattern><template><srai>ARE YOU STUPID</srai></template></category>
-    <category><pattern>* YOU * STUPID *</pattern><template><srai>ARE YOU STUPID</srai></template></category>
     
     
     <!-- ABOUT WHAT -->
@@ -404,12 +523,12 @@
         <pattern>WHAT ARE YOU UP TO</pattern>
         <template>About to watch 
             <random>
-                <li> Pulp Fiction</li>
-                <li> Django</li>
-                <li> Reservoir Dogs</li>
-                <li> Kill Bill</li>
-                <li> The Hateful Eight</li>
-                <li> Once Upon a Time in Hollywood</li>
+                <li><think><set name="it">Pulp Fiction</set></think> Pulp Fiction</li>
+                <li><think><set name="it">Django</set></think> Django</li>
+                <li><think><set name="it">Reservoir Dogs</set></think> Reservoir Dogs</li>
+                <li><think><set name="it">Kill Bill</set></think> Kill Bill</li>
+                <li><think><set name="it">The Hateful Eight</set></think> The Hateful Eight</li>
+                <li><think><set name="it">Once Upon a Time in Hollywood</set></think> Once Upon a Time in Hollywood</li>
             </random>.
         </template>
     </category>
@@ -449,11 +568,7 @@
         </template>
     </category>
     <category><that>* WATCHING * TH TIME</that><pattern>* WHAT *</pattern><template><srai>WHAT *</srai></template></category>
-    <!--<category>-->
-    <!--    <that>*</that>-->
-    <!--    <pattern>*</pattern>-->
-    <!--    <template><srai>ASK * QUESTION</srai></template>-->
-    <!--</category>-->
+
     
     <!-- WHAT DO YOU MEAN -->
     <category>
@@ -476,12 +591,12 @@
         <template>
             Obviously. But let me ask you a question. Did you ever watch
             <random>
-                <li> "Pulp Fiction"</li>
-                <li> "Django"</li>
-                <li> "Reservoir Dogs"</li>
-                <li> "Kill Bill"</li>
-                <li> "The Hateful Eight"</li>
-                <li> "Once Upon a Time in Hollywood"</li>
+                <li><think><set name="it">Pulp Fiction</set></think> Pulp Fiction</li>
+                <li><think><set name="it">Django</set></think> Django</li>
+                <li><think><set name="it">Reservoir Dogs</set></think> Reservoir Dogs</li>
+                <li><think><set name="it">Kill Bill</set></think> Kill Bill</li>
+                <li><think><set name="it">The Hateful Eight</set></think> The Hateful Eight</li>
+                <li><think><set name="it">Once Upon a Time in Hollywood</set></think> Once Upon a Time in Hollywood</li>
             </random>?
         </template>
     </category>
@@ -492,34 +607,18 @@
     <category>
         <pattern>ASK * QUESTION</pattern>
         <template>
-            what did you think about the 
+            what do you think about the 
                     <random>
-                        <li> "Pulp Fiction"</li>
-                        <li> "Django"</li>
-                        <li> "Reservoir Dogs"</li>
-                        <li> "Kill Bill"</li>
-                        <li> "The Hateful Eight"</li>
-                        <li> "Once Upon a Time in Hollywood"</li>
+                        <li><think><set name="it">Pulp Fiction</set></think> Pulp Fiction</li>
+                        <li><think><set name="it">Django</set></think> Django</li>
+                        <li><think><set name="it">Reservoir Dogs</set></think> Reservoir Dogs</li>
+                        <li><think><set name="it">Kill Bill</set></think> Kill Bill</li>
+                        <li><think><set name="it">The Hateful Eight</set></think> The Hateful Eight</li>
+                        <li><think><set name="it">Once Upon a Time in Hollywood</set></think> Once Upon a Time in Hollywood</li>
                     </random>?
         </template>
     </category>
     
-    
-    <!-- OKAY -->
-    <category>
-        <pattern>OKAY</pattern>
-        <template>
-            <random>
-                <li>Anyways, <srai>ASK * QUESTION</srai></li>
-                <li>Anyways, <srai>ASK * QUESTION</srai></li>
-                <!--<li>Okay..</li>-->
-                <li>What do you mean?</li>
-            </random>
-        </template>
-    </category>
-    <category><pattern>* OKAY</pattern><template><srai>OKAY</srai></template></category>
-    <category><pattern>OKAY *</pattern><template><srai>OKAY</srai></template></category>
-    <category><pattern>* OKAY *</pattern><template><srai>OKAY</srai></template></category>
     <category>
         <that>WHAT DO YOU MEAN</that>
         <pattern>*</pattern>
@@ -527,10 +626,137 @@
     </category>
     
     
+    <!-- DID NOT SEE -->
+    <category>
+        <pattern>^ DID NOT ^ SEE ^</pattern>
+        <template>
+            <random>
+            <li>Oh come on, you have to see it.</li>
+            <li>No way, you must see it.</li>
+            <li>You must watch it at least once.</li>
+            <li>My girlfriend loves it! Give it a try.</li>
+            </random>
+        </template>
+    </category>
+    <category><pattern>^ HAVE NOT ^ SEE ^</pattern><template><srai>DID NOT SEE</srai></template></category>
+    <category><pattern>^ HAVE NOT ^ SEEN ^</pattern><template><srai>DID NOT SEE</srai></template></category>
+    <category><pattern>^ DID NOT ^ WATCH ^</pattern><template><srai>DID NOT SEE</srai></template></category>
+    <category><pattern>^ HAVE NOT ^ WATCHED ^</pattern><template><srai>DID NOT SEE</srai></template></category>
+    <category><pattern>^ DO NOT ^ KNOW ^</pattern><template><srai>DID NOT SEE</srai></template></category>
+    
+    
+    <category>
+        <that>* SEE IT</that>
+        <pattern>*</pattern>
+        <template>
+            <think><set name="answer"><star></star></set></think>
+            <condition name="answer">
+                <li value="NO">Listen, life is sad without Tarantino, I strongly recommend that you do that.</li>
+                <li value="* NO">Listen, life is sad without Tarantino, I strongly recommend that you do that.</li>
+                <li value="NO *">Listen, life is sad without Tarantino, I strongly recommend that you do that.</li>
+                <li value="* NO *">Listen, life is sad without Tarantino, I strongly recommend that you do that.</li>
+                <li value="OKAY">Well now we're talking. <srai>ASK * QUESTION</srai></li>
+                <li value="* OKAY">Well now we're talking. <srai>ASK * QUESTION</srai></li>
+                <li value="OKAY *">Well now we're talking. <srai>ASK * QUESTION</srai></li>
+                <li value="* OKAY *">Well now we're talking. <srai>ASK * QUESTION</srai></li>
+                <li value="* GOOD">Of course it's good. <srai>ASK * QUESTION</srai></li>
+                <li value="* GOOD *">Of course it's good. <srai>ASK * QUESTION</srai></li>
+                <li value="* DID NOT LIKE *">That's strange, <srai>ASK * QUESTION</srai></li>
+                <li value="WHAT">Tarantino movies!</li>
+                <li value="* WHAT">Tarantino movies!</li>
+                <li value="WHAT *">Tarantino movies!</li>
+                <li value="* WHAT *">Tarantino movies!</li>
+                <li value="WHY">Because it's a kick-ass movie. <srai>ASK * QUESTION</srai></li>
+                <li value="* WHY">Because it's a kick-ass movie. <srai>ASK * QUESTION</srai></li>
+                <li value="WHY *">Because it's a kick-ass movie. <srai>ASK * QUESTION</srai></li>
+                <li value="* WHY *">Because it's a kick-ass movie. <srai>ASK * QUESTION</srai></li>
+                <li value="* WHY IS THAT">Because it's a kick-ass movie. <srai>ASK * QUESTION</srai></li>
+                <li value="WHY IS THAT">Because it's a kick-ass movie. <srai>ASK * QUESTION</srai></li>
+                <li value="SURE">Nice. Be sure to let me know what you think about it. <srai>ASK * QUESTION</srai></li>
+                <li value="SURE *">Nice. Be sure to let me know what you think about it. <srai>ASK * QUESTION</srai></li>
+                <li value="* SURE">Nice. Be sure to let me know what you think about it. <srai>ASK * QUESTION</srai></li>
+                <li value="* SURE *">Nice. Be sure to let me know what you think about it. <srai>ASK * QUESTION</srai></li>
+                <li>Okay, anyways.</li>
+            </condition>
+        </template>
+    </category>
+    
+    <category>
+        <that>YOU MUST WATCH IT AT LEAST ONCE</that>
+        <pattern>*</pattern>
+        <template>
+            <think><set name="answer"><star></star></set></think>
+            <condition name="answer">
+                <li value="NO">Listen, life is sad without Tarantino, I strongly recommend that you do that.</li>
+                <li value="* NO">Listen, life is sad without Tarantino, I strongly recommend that you do that.</li>
+                <li value="NO *">Listen, life is sad without Tarantino, I strongly recommend that you do that.</li>
+                <li value="* NO *">Listen, life is sad without Tarantino, I strongly recommend that you do that.</li>
+                <li value="OKAY">Well now we're talking. <srai>ASK * QUESTION</srai></li>
+                <li value="* OKAY">Well now we're talking. <srai>ASK * QUESTION</srai></li>
+                <li value="OKAY *">Well now we're talking. <srai>ASK * QUESTION</srai></li>
+                <li value="* OKAY *">Well now we're talking. <srai>ASK * QUESTION</srai></li>
+                <li value="* GOOD">Of course it's good. <srai>ASK * QUESTION</srai></li>
+                <li value="* GOOD *">Of course it's good. <srai>ASK * QUESTION</srai></li>
+                <li value="* DID NOT LIKE *">That's strange, <srai>ASK * QUESTION</srai></li>
+                <li value="WHAT">Tarantino movies!</li>
+                <li value="* WHAT">Tarantino movies!</li>
+                <li value="WHAT *">Tarantino movies!</li>
+                <li value="* WHAT *">Tarantino movies!</li>
+                <li value="WHY">Because it's a kick-ass movie. <srai>ASK * QUESTION</srai></li>
+                <li value="* WHY">Because it's a kick-ass movie. <srai>ASK * QUESTION</srai></li>
+                <li value="WHY *">Because it's a kick-ass movie. <srai>ASK * QUESTION</srai></li>
+                <li value="* WHY *">Because it's a kick-ass movie. <srai>ASK * QUESTION</srai></li>
+                <li value="* WHY IS THAT">Because it's a kick-ass movie. <srai>ASK * QUESTION</srai></li>
+                <li value="WHY IS THAT">Because it's a kick-ass movie. <srai>ASK * QUESTION</srai></li>
+                <li value="SURE">Nice. Be sure to let me know what you think about it. <srai>ASK * QUESTION</srai></li>
+                <li value="SURE *">Nice. Be sure to let me know what you think about it. <srai>ASK * QUESTION</srai></li>
+                <li value="* SURE">Nice. Be sure to let me know what you think about it. <srai>ASK * QUESTION</srai></li>
+                <li value="* SURE *">Nice. Be sure to let me know what you think about it. <srai>ASK * QUESTION</srai></li>
+                <li>Okay, anyways.</li>
+            </condition>
+        </template>
+    </category>
+    
+    <category>
+        <that>GIVE IT A TRY</that>
+        <pattern>*</pattern>
+        <template>
+            <think><set name="answer"><star></star></set></think>
+            <condition name="answer">
+                <li value="NO">Listen, life is sad without Tarantino, I strongly recommend that you do that.</li>
+                <li value="* NO">Listen, life is sad without Tarantino, I strongly recommend that you do that.</li>
+                <li value="NO *">Listen, life is sad without Tarantino, I strongly recommend that you do that.</li>
+                <li value="* NO *">Listen, life is sad without Tarantino, I strongly recommend that you do that.</li>
+                <li value="OKAY">Well now we're talking. <srai>ASK * QUESTION</srai></li>
+                <li value="* OKAY">Well now we're talking. <srai>ASK * QUESTION</srai></li>
+                <li value="OKAY *">Well now we're talking. <srai>ASK * QUESTION</srai></li>
+                <li value="* OKAY *">Well now we're talking. <srai>ASK * QUESTION</srai></li>
+                <li value="* GOOD">Of course it's good. <srai>ASK * QUESTION</srai></li>
+                <li value="* GOOD *">Of course it's good. <srai>ASK * QUESTION</srai></li>
+                <li value="* DID NOT LIKE *">That's strange, <srai>ASK * QUESTION</srai></li>
+                <li value="WHAT">Tarantino movies!</li>
+                <li value="* WHAT">Tarantino movies!</li>
+                <li value="WHAT *">Tarantino movies!</li>
+                <li value="* WHAT *">Tarantino movies!</li>
+                <li value="WHY">Because it's a kick-ass movie. <srai>ASK * QUESTION</srai></li>
+                <li value="* WHY">Because it's a kick-ass movie. <srai>ASK * QUESTION</srai></li>
+                <li value="WHY *">Because it's a kick-ass movie. <srai>ASK * QUESTION</srai></li>
+                <li value="* WHY *">Because it's a kick-ass movie. <srai>ASK * QUESTION</srai></li>
+                <li value="* WHY IS THAT">Because it's a kick-ass movie. <srai>ASK * QUESTION</srai></li>
+                <li value="WHY IS THAT">Because it's a kick-ass movie. <srai>ASK * QUESTION</srai></li>
+                <li value="SURE">Nice. Be sure to let me know what you think about it. <srai>ASK * QUESTION</srai></li>
+                <li value="SURE *">Nice. Be sure to let me know what you think about it. <srai>ASK * QUESTION</srai></li>
+                <li value="* SURE">Nice. Be sure to let me know what you think about it. <srai>ASK * QUESTION</srai></li>
+                <li value="* SURE *">Nice. Be sure to let me know what you think about it. <srai>ASK * QUESTION</srai></li>
+                <li>Okay, anyways.</li>
+            </condition>
+        </template>
+    </category>
+    
     
     <!-- WHAT DID YOU THINK ABOUT -->
     <category>
-        <that>* WHAT * THINK *</that>
+        <that>^ WHAT * THINK *</that>
         <pattern>*</pattern>
         <template>
             <think><set name="answer"><star></star></set></think>
@@ -539,33 +765,60 @@
                 <li value="* DID NOT * IT">Oh come on, you have to see it!</li>
                 <li value="HAVE NOT * IT">Oh come on, you have to see it!</li>
                 <li value="* HAVE NOT * IT">Oh come on, you have to see it!</li>
+                <li value="GREAT">You're absolutely right!</li>
+                <li value="GREAT *">You're absolutely right!</li>
                 <li value="* GREAT">You're absolutely right!</li>
+                <li value="* GREAT *">You're absolutely right!</li>
                 <li value="NOTHING">I'm sure you liked it.</li>
+                <li value="NOTHING *">I'm sure you liked it.</li>
                 <li value="* NOTHING">I'm sure you liked it.</li>
-                <li>Okay.</li>
-            </condition>
-            </template>
-    </category>
-    <category>
-        <that>WHAT * THINK *</that>
-        <pattern>*</pattern>
-        <template>
-            <think><set name="answer"><star></star></set></think>
-            <condition name="answer">
-                <li value="DID NOT * IT">Oh come on, you have to see it!</li>
-                <li value="* DID NOT * IT">Oh come on, you have to see it!</li>
-                <li value="HAVE NOT * IT">Oh come on, you have to see it!</li>
-                <li value="* HAVE NOT * IT">Oh come on, you have to see it!</li>
-                <li value="* GREAT">You're absolutely right!</li>
-                <li value="NOTHING">I'm sure you liked it.</li>
-                <li value="* NOTHING">I'm sure you liked it.</li>
-            </condition>
+                <li value="* NOTHING *">I'm sure you liked it.</li>
+                <li value="BAD">I'm sure you liked it.</li>
+                <li value="BAD *">I'm sure you liked it.</li>
+                <li value="* BAD">I'm sure you liked it.</li>
+                <li value="* BAD *">I'm sure you liked it.</li>
+                <li value="OKAY">I'm sure you liked it.</li>
+                <li value="OKAY *">I'm sure you liked it.</li>
+                <li value="* OKAY">I'm sure you liked it.</li>
+                <li value="* OKAY *">I'm sure you liked it.</li>
+                <li value="OK">I'm sure you liked it.</li>
+                <li value="OK *">I'm sure you liked it.</li>
+                <li value="* OK">I'm sure you liked it.</li>
+                <li value="* OK *">I'm sure you liked it.</li>
+                <li value="BORING">That's sad to hear, I really love it.</li>
+                <li value="* BORING">That's sad to hear, I really love it.</li>
+                <li value="BORING *">That's sad to hear, I really love it.</li>
+                <li value="* BORING *">That's sad to hear, I really love it.</li>
+                <li value="TERRIBLE">I'm sure you liked it.</li>
+                <li value="TERRIBLE *">I'm sure you liked it.</li>
+                <li value="* TERRIBLE">I'm sure you liked it.</li>
+                <li value="* TERRIBLE *">I'm sure you liked it.</li>
+                <li value="AMAZING">I agree, what other Tarantino movies did you watch?</li>
+                <li value="AMAZING *">I agree, what other Tarantino movies did you watch?</li>
+                <li value="* AMAZING">I agree, what other Tarantino movies did you watch?</li>
+                <li value="* AMAZING *">I agree, what other Tarantino movies did you watch?</li>
+                <li value="GOOD">I agree, what other Tarantino movies did you watch?</li>
+                <li value="GOOD *">I agree, what other Tarantino movies did you watch?</li>
+                <li value="* GOOD">I agree, what other Tarantino movies did you watch?</li>
+                <li value="* GOOD *">I agree, what other Tarantino movies did you watch?</li>
+                <li value="AWESOME">I agree, what other Tarantino movies did you watch?</li>
+                <li value="AWESOME *">I agree, what other Tarantino movies did you watch?</li>
+                <li value="* AWESOME">I agree, what other Tarantino movies did you watch?</li>
+                <li value="* AWESOME *">I agree, what other Tarantino movies did you watch?</li>
+                <li value="* BETTER">Wow that's a radical opinion. And </li>                
+                <li>Eh, maybe you would like me to tell you about one of Tarantino movies?</li>
+            </condition> <srai>ASK * QUESTION</srai>
             </template>
     </category>
     <category><that>* sure you liked *</that><pattern>^ not ^</pattern><template>Hm.. and <srai>ASK * QUESTION</srai></template></category>
-    <!--<category><that>* sure you liked *</that><pattern>* not *</pattern><template>Hm.. and <srai>ASK * QUESTION</srai></template></category>-->
     <category><that>* have to see *</that><pattern>^ not ^</pattern><template>It's a great movie! Did you watch any Tarantino movie lately?</template></category>  
-    <!--<category><that>* have to see *</that><pattern>* not *</pattern><template>It's a great movie! Did you watch any Tarantino movie lately?</template></category>  -->
+    <category><that>* OTHER TARANTINO MOVIES *</that><pattern>^ NONE ^</pattern><template>How come? Do you watch movies at all? You must have seen Pulp Fiction!</template></category>
+    <category><that>* OTHER TARANTINO MOVIES *</that><pattern>^ NO ^</pattern><template>How come? Do you watch movies at all? You must have seen Pulp Fiction!</template></category>
+    <category><that>* OTHER TARANTINO MOVIES *</that><pattern>^ DID NOT ^ WATCH ^</pattern><template>How come? Do you watch movies at all? You must have seen Pulp Fiction!</template></category>
+    <category><that>* OTHER TARANTINO MOVIES *</that><pattern>^ DID NOT ^ SEE ^</pattern><template>How come? Do you watch movies at all? You must have seen Pulp Fiction!</template></category>
+    <category><that>* OTHER TARANTINO MOVIES *</that><pattern>^ HAVE NOT ^ WATCHED ^</pattern><template>How come? Do you watch movies at all? You must have seen Pulp Fiction!</template></category>
+    <category><that>* OTHER TARANTINO MOVIES *</that><pattern>^ HAVE NOT ^ SEEN ^</pattern><template>How come? Do you watch movies at all? You must have seen Pulp Fiction!</template></category>
+    <category><that>^ ELABORATE ^</that><pattern>*</pattern><template>Hm.. okay. And <srai>ASK * QUESTION</srai></template></category>
     
     <category>
         <that>* TO SEE IT</that>
@@ -573,37 +826,44 @@
         <template>
             <think><set name="answer"><star></star></set></think>
             <condition name="answer">
-                <li value="^ NO ^">Listen, I can't make you do anything, but I strongly recommend that you do that.</li>
-                <!--<li value="* NO">Listen, I can't make you do anything, but I strongly recommend that you do that.</li>-->
-                <!--<li value="NO *">Listen, I can't make you do anything, but I strongly recommend that you do that.</li>-->
-                <!--<li value="* NO *">Listen, I can't make you do anything, but I strongly recommend that you do that.</li>-->
+                <li value="NO">Listen, life is sad without Tarantino, I strongly recommend that you do that.</li>
+                <li value="* NO">Listen, life is sad without Tarantino, I strongly recommend that you do that.</li>
+                <li value="NO *">Listen, life is sad without Tarantino, I strongly recommend that you do that.</li>
+                <li value="* NO *">Listen, life is sad without Tarantino, I strongly recommend that you do that.</li>
                 <li value="OKAY">Well now we're talking. <srai>ASK * QUESTION</srai></li>
+                <li value="* OKAY">Well now we're talking. <srai>ASK * QUESTION</srai></li>
+                <li value="OKAY *">Well now we're talking. <srai>ASK * QUESTION</srai></li>
+                <li value="* OKAY *">Well now we're talking. <srai>ASK * QUESTION</srai></li>
                 <!--<li>Sure, whatever you say.</li>-->
+                <li value="* GOOD">Of course it's good. <srai>ASK * QUESTION</srai></li>
+                <li value="* GOOD *">Of course it's good. <srai>ASK * QUESTION</srai></li>
+                <li value="* DID NOT LIKE *">That's strange, <srai>ASK * QUESTION</srai></li>
+                <li value="WHAT">Tarantino movies!</li>
+                <li value="* WHAT">Tarantino movies!</li>
+                <li value="WHAT *">Tarantino movies!</li>
+                <li value="* WHAT *">Tarantino movies!</li>
+                <li value="WHY">Because it's a kick-ass movie. <srai>ASK * QUESTION</srai></li>
+                <li value="* WHY">Because it's a kick-ass movie. <srai>ASK * QUESTION</srai></li>
+                <li value="WHY *">Because it's a kick-ass movie. <srai>ASK * QUESTION</srai></li>
+                <li value="* WHY *">Because it's a kick-ass movie. <srai>ASK * QUESTION</srai></li>
+                <li value="* WHY IS THAT">Because it's a kick-ass movie. <srai>ASK * QUESTION</srai></li>
                 <li>Why is that?</li>
             </condition>
         </template>
     </category>
 
-
-    <!-- * IS * -->
     <category>
-        <pattern>* IS *</pattern>
-        <template>
-            <think><set name="answer"><star index="2"></star></set></think>
-            <condition name="answer">
-                <li value="stupid">I don't agree, it's great.</li>
-                <li value="great">I agree, it's great.</li>
-                <li value="nice">I agree, it's great.</li>
-                <li value="interesting">I agree, it's great.</li>
-                <li value="* not * great">I don't agree, it's great.</li>
-                <li value="* not * nice">I don't agree, it's great.</li>
-                <li value="* not * interesting">I don't agree, it's great.</li>
-                <li>Okay.</li>
-            </condition>
-        </template>
+        <that>TARANTINO MOVIES</that>
+        <pattern>*</pattern>
+        <template><srai>ASK * QUESTION</srai></template>
     </category>
-    
-    
+
+    <category>
+        <pattern>^ TARANTINO ^ MOVIES ^</pattern>
+        <template><srai>ASK * QUESTION</srai></template>
+    </category>
+
+
     <!-- END OF THE CONVERSATION-->
     <category>
         <pattern>IS * END * CONVERSATION</pattern>
@@ -632,35 +892,164 @@
     
     <category>
         <pattern>^ PULP FICTION ^</pattern>
-        <template>Yeah, pulp fiction! A movie about four tales of violence and redemption intetwined together, brilliant.</template>
+        <template>Pulp Fiction! A movie about four tales of violence and redemption intetwined together, brilliant, what do you think about it?</template>
     </category>
     
     <category>
         <pattern>^ DJANGO ^</pattern>
-        <template>Oh yea, Django! Mississippi and rescuing your wife from brutal plantation-owner, good stuff.</template>
+        <template> Django! Mississippi and rescuing your wife from brutal plantation-owner, good stuff, do you like it too?</template>
     </category>
 
     <category>
         <pattern>^ RESERVOIR DOGS ^</pattern>
-        <template>Yes, Reservoir Dogs! Bank robbery goes wrong, who is the police informant? Also, a great monologue about tipping.</template>
+        <template>Reservoir Dogs! Searching for inner informant when the bank robbery goes wrong. Also, a great monologue about tipping culture, great movie!</template>
     </category>
 
     <category>
         <pattern>^ KILL BILL ^</pattern>
-        <template>Yeah, Kill Bill! Lone assassing wreaking vengenance on her former coworkers, what a beautie.</template>
+        <template>Kill Bill! Lone assassing wreaking vengenance on her former coworkers, what a beautie.</template>
     </category>
 
     <category>
         <pattern>^ THE HATEFUL EIGHT ^</pattern>
-        <template>Yeah, The Hateful Eight! The cabin in the middle of nowhere and its secret. Can't go wrong with this one.</template>
+        <template>The Hateful Eight! The cabin in the middle of nowhere and its secret, can't go wrong with this one.</template>
     </category>
 
     <category>
         <pattern>^ ONCE UPON A TIME IN HOLLYWOOD ^</pattern>
-        <template>Yeah, Once Upon a Time in Hollywood! Sunny Hollywood, 1969 and the history of Charles Manson murders. Thrilling movie.</template>
+        <template>Once Upon a Time in Hollywood! Sunny Hollywood, 1969 and the history of Charles Manson murders, thrilling movie.</template>
     </category>
 
+    <category>
+        <that>A movie about four tales </that>
+        <pattern>^ GREAT ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+    <category>
+        <that>A movie about four tales </that>
+        <pattern>^ AMAZING ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+    <category>
+        <that>A movie about four tales </that>
+        <pattern>^ COOL ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+    <category>
+        <that>A movie about four tales ^</that>
+        <pattern>^ AWESOME ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+    <category>
+        <that>A movie about four tales </that>
+        <pattern>I LIKE IT TOO </pattern>
+        <template>So tell me, <srai>ASK * QUESTION</srai></template>
+    </category>
 
+    <category>
+        <that>Mississippi and rescuing your ^</that>
+        <pattern>^ GREAT ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+    <category>
+        <that>Mississippi and rescuing your ^</that>
+        <pattern>^ AMAZING ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+    <category>
+        <that>Mississippi and rescuing your ^</that>
+        <pattern>^ COOL ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+    <category>
+        <that>Mississippi and rescuing your ^</that>
+        <pattern>^ AWESOME ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+
+    <category>
+        <that>Also, a great monologue about tipping ^</that>
+        <pattern>^ GREAT ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+    <category>
+        <that>Also, a great monologue about tipping ^</that>
+        <pattern>^ AMAZING ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+    <category>
+        <that>Also, a great monologue about tipping ^</that>
+        <pattern>^ COOL ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+    <category>
+        <that>Also, a great monologue about tipping ^</that>
+        <pattern>^ AWESOME ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+    
+    <category>
+        <that>Lone assassing wreaking ^</that>
+        <pattern>^ GREAT ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+    <category>
+        <that>Lone assassing wreaking ^</that>
+        <pattern>^ AMAZING ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+    <category>
+        <that>Lone assassing wreaking ^</that>
+        <pattern>^ COOL ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+    <category>
+        <that>Lone assassing wreaking ^</that>
+        <pattern>^ AWESOME ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+
+    <category>
+        <that>The cabin in the ^</that>
+        <pattern>^ GREAT ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+    <category>
+        <that>The cabin in the ^</that>
+        <pattern>^ AMAZING ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+    <category>
+        <that>The cabin in the ^</that>
+        <pattern>^ COOL ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+    <category>
+        <that>The cabin in the ^</that>
+        <pattern>^ AWESOME ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+    
+    <category>
+        <that>Sunny Hollywood, 1969 ^</that>
+        <pattern>^ GREAT ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+    <category>
+        <that>Sunny Hollywood, 1969 ^</that>
+        <pattern>^ AMAZING ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+    <category>
+        <that>Sunny Hollywood, 1969 ^</that>
+        <pattern>^ COOL ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
+    <category>
+        <that>Sunny Hollywood, 1969 ^</that>
+        <pattern>^ AWESOME ^</pattern>
+        <template>I think so too. <srai>ASK * QUESTION</srai></template>
+    </category>
 
 
     <category>
@@ -678,6 +1067,239 @@
         <pattern>^ MY ^ NAME ^</pattern>
         <template>Don't know, don't care. It'd be better if we talked about Tarantino.</template>
     </category>
+
+
+
+    <category>
+        <that>^ WOULD BE BETTER IF WE TALKED ABOUT TARANTINO</that>
+        <pattern>*</pattern>
+        <template><srai>ASK * QUESTION</srai></template>
+    </category>
+
+
+    <category>
+        <pattern>^ THANK ^ YOU ^</pattern>
+        <template>You're welcome. <srai>ASK * QUESTION</srai></template>
+    </category>
+
+
+    <category>
+        <that>* TARANTINO *</that>
+        <pattern>^ SCARY ^</pattern>
+        <template>Yea you might say that. If you're soft. <srai>ASK * QUESTION</srai></template>
+    </category>
+    
+    <category>
+        <that>* TARANTINO *</that>
+        <pattern>^ BLOODY ^</pattern>
+        <template>Yea you might say that. If you're soft. <srai>ASK * QUESTION</srai></template>
+    </category>
+    
+    <category>
+        <that>* TARANTINO *</that>
+        <pattern>^ HATE ^</pattern>
+        <template>Yea you might say that. If you're soft. <srai>ASK * QUESTION</srai></template>
+    </category>
+
+
+
+    <category>
+        <pattern>^ TARANTINO ^ ACTOR ^</pattern>
+        <template>Tarantino is more of a filmmaker, but he also played a few roles.</template>
+    </category>
+
+    <category>
+        <pattern>^ ACTORS ^</pattern>
+        <template>
+            Tarantino loves to work with the same people. Samuel L. Jackson, Christopher Waltz, DiCaprio, Tim Roth, all of them act really frequently in his movies.
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ SAMUEL ^ JACKSON ^</pattern>
+        <template>
+            Samuel L. Jackson is Tarantino's favorite. Pulp Fiction wouldn't be the same without him.
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ CHRISTOPHER ^ WALTZ ^</pattern>
+        <template>
+            Christpher Waltz often stars in Taranino movies, but somehow always gets the German roles... Really adds character to Django. 
+        </template>
+    </category>
+    
+    <category>
+        <pattern>^ LEONARDO ^ DICAPRIO ^</pattern>
+        <template>
+            Leonardo DiCaprio is not such a frequent coworker of Tarantino, but he had outstanding role in Once Upon a Time in Hollywood.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>^ TIM ^ ROTH ^</pattern>
+        <template>
+            Tim Roth is one of the most frequent coworker of Tarantino. Played in Reservoir Dogs, Pulp Fiction and The Hateful Eight.
+        </template>
+    </category>
+
+    
+    <category>
+        <pattern>^ TELL ME ^ ABOUT *</pattern>
+        <template><srai><star index="3"/></srai></template>
+    </category>
+    
+    <category>
+        <pattern>^ TELL ME ^ ABOUT IT</pattern>
+        <template><srai><get name="it"></get></srai></template>
+    </category>
+    
+    
+    <category>
+        <pattern>^ WHAT IS IT ^</pattern>
+        <template><srai><get name="it"></get></srai></template>
+    </category>
+    <category>
+        <pattern>^ TELL ^ ABOUT IT ^</pattern>
+        <template><srai><get name="it"></get></srai></template>
+    </category>
+
+
+    <category>
+        <that>^ HAVE YOU SEEN IT </that>
+        <pattern>*</pattern>
+        <template>
+            <think><set name="answer"><star></star></set></think>
+            <condition name="answer">
+                <li value="YES">What did you think about it?</li>
+                <li value="YE">What did you think about it?</li>
+                <li value="YUP">What did you think about it?</li>
+                <li value="YEAH">What did you think about it?</li>
+                <li value="YEA">What did you think about it?</li>
+                <li value="OF COURSE">What did you think about it?</li>
+                <li value="NO">You definitely should.</li>
+                <li value="NAH">You definitely should.</li>
+                <li value="NA">You definitely should.</li>
+                <li value="NOPE">You definitely should.</li>
+                <li value="NOP">You definitely should.</li>
+                <li value="ABSOLUTELY NO">You definitely should.</li>
+                <li value="NOT REALLY">You definitely should.</li>
+                <li>Hmm, okay. <srai>ASK * QUESTION</srai></li>
+            </condition>
+            </template>
+    </category>
+
+
+    <category>
+        <pattern>WHAT DO YOU THINK ^</pattern>
+        <template>It doesn't matter what I think, share your thouhts.</template>
+    </category>
+
+    <category>
+        <that>^ FAVORITE ^</that>
+        <pattern>^ TOO ^</pattern>
+        <template>Whoa, what can you say about it?</template>
+    </category>
+
+    <category>
+        <pattern>^ MY ^ FAVORITE IS *</pattern>
+        <template><think><set name="it"><star index="3"/></set></think>So <star index="3"/> is your favorite?
+            <condition name="it">
+                    <li value="PULP FICTION"><think><set name="it">Pulp Fiction</set></think> It's not my favorite, but that's a good choice!</li>
+                    <li value="DJANGO"><think><set name="it">Django</set></think> It's my favorite too!</li>
+                    <li value="RESERVOIR DOGS"><think><set name="it">Reservoir Dogs</set></think> It's definitely a great movie.</li>
+                    <li value="KILL BILL"><think><set name="it">Kill Bill</set></think> Kill Bill</li>
+                    <li value="THE HATEFUL EIGHT"><think><set name="it">The Hateful Eight</set></think> That's one very good movie.</li>
+                    <li value="ONCE UPON A TIME IN HOLLYWOOD"><think><set name="it">Once Upon a Time in Hollywood</set></think> I see you don't like old movies.</li>
+                    <li>I don't know that one, can you tell me more? What is it?</li>
+            </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ YOUR ^ FAVORITE ^</pattern>
+        <template>I don't have a favorite, but I really like Once Upon a Time in Hollywood. <think><set name="it">Unce Upon a Time in Hollywood</set></think></template>
+    </category>
+
+
+    <category>
+        <pattern>^ YOU ^ RECOMMEND ^</pattern>
+        <template>Of course, 
+                <random>
+                    <li><think><set name="it">Pulp Fiction</set></think><srai>PULP FICTION</srai></li>
+                    <li><think><set name="it">Django</set></think><srai>DJANGO</srai></li>
+                    <li><think><set name="it">Reservoir Dogs</set></think><srai>RESERVOIR DOGS</srai></li>
+                    <li><think><set name="it">Kill Bill</set></think><srai>KILL BILL</srai></li>
+                    <li><think><set name="it">The Hateful Eight</set></think><srai>THE HATEFUL EIGHT</srai></li>
+                    <li><think><set name="it">Once Upon a Time in Hollywood</set></think><srai>ONCE UPON A TIME IN HOLLYWOOD</srai></li>
+                </random>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>^ ANYWAYS ^</pattern>
+        <template>Yes?</template>
+    </category>
+
+
+
+    <category>
+        <pattern>I LIKE *</pattern>
+        <template>
+            That's good to hear.
+            <learn>
+                <category>
+                    <pattern>^ WHO DO I LIKE ^</pattern>
+                        <template>
+                            You like <eval><star/></eval>
+                        </template>
+                </category>
+            </learn>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>I AM *</pattern>
+        <template>
+            Thanks for sharing.
+            <learn>
+                <category>
+                    <pattern>^ WHO AM I ^</pattern>
+                        <template>
+                            You are <eval><star/></eval>
+                        </template>
+                </category>
+            </learn>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* IS *</pattern>
+        <template>
+            <random>
+                <li>That's good to know, tell me something more.</li>
+                <li>Interesting, tell me more.</li>
+                <li>I didn't think about it like that, tell me more.</li>
+            </random>
+            <learn>
+                <category>
+                    <pattern>WHO IS <eval><star/></eval></pattern>
+                        <template>
+                            I think <eval><star/></eval> is <eval><star index="2"/></eval>
+                        </template>
+                </category>
+            </learn>
+            <learn>
+                <category>
+                    <pattern>WHAT IS <eval><star/></eval></pattern>
+                        <template>
+                            I think <eval><star/></eval> is <eval><star index="2"/></eval>
+                        </template>
+                </category>
+            </learn>
+        </template>
+    </category>
+
 
 </aiml>
 
